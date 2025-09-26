@@ -22,7 +22,7 @@ app = FastAPI()
 # For local training use the path "../models/model-best-2.h5"
 
 
-MODEL_PATH = "../models/model-best-2.h5"
+MODEL_PATH = "../models/model-best-thijn.h5"
 model = load_model(MODEL_PATH, custom_objects={"f1": f1})
 
 
