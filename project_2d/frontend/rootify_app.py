@@ -214,8 +214,15 @@ st.markdown("<br>", unsafe_allow_html=True) # Add spacing
 
 input_mode = st.radio("Choose input mode:", ["Single Image", "Folder of Images"])
 
+
+# --- Reset button ---
+if st.button("Reset Application"):
+    st.session_state.clear()
+    st._rerun()
+
 # --- Download Example Images ---
-st.markdown("### 🥰 Example Images")
+st.markdown("### Example Images")
+st.markdown("<br>", unsafe_allow_html=True) # Add spacing
 st.markdown("Need test images? Download our example dataset to try Rootify:")
 
 if st.button("📁 Download Example Images"):
@@ -233,13 +240,6 @@ if st.button("📁 Download Example Images"):
         st.success("👍 Example images ready for download!")
     else:
         st.error("❌ Example images file not found. Please contact support.")
-
-st.markdown("---")
-
-# --- Reset button ---
-if st.button("Reset Application"):
-    st.session_state.clear()
-    st._rerun()
 
 accepted_types = ["png", "jpg", "jpeg"]
 patch_size = 256
