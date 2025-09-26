@@ -216,7 +216,7 @@ input_mode = st.radio("Choose input mode:", ["Single Image", "Folder of Images"]
 
 
 # --- Reset button ---
-if st.button("Reset Application"):
+if st.button("🚧 Reset Application"):
     st.session_state.clear()
     st._rerun()
 
