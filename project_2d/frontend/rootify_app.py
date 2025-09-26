@@ -209,7 +209,32 @@ st.markdown(
 )
 
 st.markdown("### Select Input Type")
+
+st.markdown("<br>", unsafe_allow_html=True) # Add spacing
+
 input_mode = st.radio("Choose input mode:", ["Single Image", "Folder of Images"])
+
+# --- Download Example Images ---
+st.markdown("### 🥰 Example Images")
+st.markdown("Need test images? Download our example dataset to try Rootify:")
+
+if st.button("📁 Download Example Images"):
+    example_zip_path = os.path.join(os.path.dirname(__file__), "example_images.zip")
+    
+    if os.path.exists(example_zip_path):
+        with open(example_zip_path, "rb") as f:
+            st.download_button(
+                label="💾 Download Example Images ZIP",
+                data=f,
+                file_name="rootify_example_images.zip",
+                mime="application/zip",
+                help="Contains sample plant root images for testing Rootify"
+            )
+        st.success("👍 Example images ready for download!")
+    else:
+        st.error("❌ Example images file not found. Please contact support.")
+
+st.markdown("---")
 
 # --- Reset button ---
 if st.button("Reset Application"):
