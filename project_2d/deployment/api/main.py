@@ -23,7 +23,7 @@ app = FastAPI()
 
 
 # Model path for Thijn's trained model:
-MODEL_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "models", "model-best-thijn.h5")
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "models", "model-best-2.h5")
 model = load_model(MODEL_PATH, custom_objects={"f1": f1})
 
 
