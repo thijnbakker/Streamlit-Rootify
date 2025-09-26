@@ -44,7 +44,7 @@ nodeenv==1.9.1
 numba==0.61.2
 numpy==1.26.4
 oauthlib==3.2.2
-opencv-python==4.11.0.86
+# opencv-python==4.11.0.86
 opencv-python-headless==4.11.0.86
 openpyxl==3.1.5
 opt-einsum==3.3.0
